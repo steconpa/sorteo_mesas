@@ -108,10 +108,11 @@ versión) para que los cambios queden en línea; la URL no cambia.
    la carpeta `/frontend` (o mueve el contenido de `frontend/` a la raíz del
    repo si prefieres servir desde `/`).
 4. Sube manualmente tu `config.js` real a la carpeta publicada (por ejemplo,
-   con `git add -f frontend/config.js` solo en un despliegue privado, o
-   copiándolo directamente en el hosting) — **o**, si el repo es público,
-   sé consciente de que cualquier persona que inspeccione el código fuente
-   de la página publicada verá el token en texto plano (ver Seguridad).
+   con `git add -f frontend/config.js`, que ignora el `.gitignore` para ese
+   archivo puntual) — asumiendo que cualquier persona que inspeccione el
+   código fuente de la página publicada verá el token en texto plano (ver
+   Seguridad). Este repo ya tiene `frontend/config.js` publicado con este
+   criterio.
 
 ## 5. Seguridad y privacidad (obligatorio, léelo)
 
