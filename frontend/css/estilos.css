@@ -216,8 +216,14 @@ select:focus, input[type="text"]:focus { outline: none; border-color: var(--colo
 
 .grid-mesas {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
+}
+@media (min-width: 640px) {
+  .grid-mesas { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 960px) {
+  .grid-mesas { grid-template-columns: repeat(3, 1fr); }
 }
 
 .mesa-card {
@@ -239,14 +245,26 @@ select:focus, input[type="text"]:focus { outline: none; border-color: var(--colo
   padding: 0;
 }
 .mesa-card li {
-  padding: 0.3rem 0;
+  padding: 0.6rem 0;
   border-bottom: 1px dashed var(--color-borde);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   gap: 0.4rem;
 }
 .mesa-card li:last-child { border-bottom: none; }
+
+.mesa-card li .fila-nombre {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  font-weight: 600;
+}
+
+.mesa-card li select {
+  width: 100%;
+}
 
 .etiqueta-fijado {
   font-size: 0.72rem;

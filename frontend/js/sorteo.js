@@ -262,16 +262,19 @@
       const ul = document.createElement('ul');
       integrantes.forEach(function (est) {
         const li = document.createElement('li');
+        const filaNombre = document.createElement('div');
+        filaNombre.className = 'fila-nombre';
         const span = document.createElement('span');
         span.textContent = est.estudiante;
-        li.appendChild(span);
+        filaNombre.appendChild(span);
 
         if (est.mesa !== est.mesaOriginal) {
           const badge = document.createElement('span');
           badge.className = 'etiqueta-editado';
           badge.textContent = 'Editado';
-          li.appendChild(badge);
+          filaNombre.appendChild(badge);
         }
+        li.appendChild(filaNombre);
 
         const select = document.createElement('select');
         for (let m = 1; m <= 6; m++) {

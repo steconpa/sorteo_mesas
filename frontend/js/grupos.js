@@ -33,15 +33,18 @@
       const ul = document.createElement('ul');
       m.estudiantes.forEach(function (est) {
         const li = document.createElement('li');
+        const filaNombre = document.createElement('div');
+        filaNombre.className = 'fila-nombre';
         const span = document.createElement('span');
         span.textContent = est.estudiante;
-        li.appendChild(span);
+        filaNombre.appendChild(span);
         if (est.fijado) {
           const badge = document.createElement('span');
           badge.className = 'etiqueta-fijado';
           badge.textContent = 'Fijado';
-          li.appendChild(badge);
+          filaNombre.appendChild(badge);
         }
+        li.appendChild(filaNombre);
         ul.appendChild(li);
       });
       card.appendChild(ul);

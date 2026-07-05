@@ -54,9 +54,12 @@
         const li = document.createElement('li');
         if (duplicados.has(est.idEstudiante)) li.classList.add('rol-duplicado');
 
+        const filaNombre = document.createElement('div');
+        filaNombre.className = 'fila-nombre';
         const span = document.createElement('span');
         span.textContent = est.estudiante;
-        li.appendChild(span);
+        filaNombre.appendChild(span);
+        li.appendChild(filaNombre);
 
         const select = document.createElement('select');
         const optVacia = document.createElement('option');
