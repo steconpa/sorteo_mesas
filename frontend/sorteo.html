@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuevo sorteo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <h1>🎲 Nuevo sorteo — <span id="titulo-curso"></span></h1>
+  <a href="index.html">← Volver al menú</a>
+</header>
+<main>
+  <div id="error-global" class="mensaje-error oculto"></div>
+  <div id="mensaje-exito" class="mensaje-exito oculto"></div>
+
+  <div class="tarjeta">
+    <h2>1. Periodo</h2>
+    <div class="fila-form">
+      <label for="select-periodo">Periodo:</label>
+      <select id="select-periodo">
+        <option value="">-- selecciona --</option>
+        <option value="P3">P3</option>
+        <option value="P4">P4</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <h2>2. Sorteo por mesas</h2>
+    <div class="progreso-mesas" id="progreso-mesas"></div>
+
+    <p id="info-mesa-actual" class="cargando">Cargando estudiantes...</p>
+
+    <div class="ruleta">
+      <div class="ruleta-nombre" id="ruleta-nombre">&nbsp;</div>
+      <div class="lista-revelados" id="lista-revelados"></div>
+    </div>
+
+    <div class="fila-form" style="justify-content:center;">
+      <button type="button" class="primario" id="btn-girar" disabled>Girar</button>
+      <button type="button" class="primario oculto" id="btn-aceptar">Aceptar y guardar</button>
+      <button type="button" class="secundario oculto" id="btn-repetir">Repetir</button>
+    </div>
+
+    <div style="text-align:center;">
+      <button type="button" class="secundario oculto" id="btn-reiniciar">Reiniciar sorteo completo</button>
+    </div>
+  </div>
+
+  <div class="tarjeta oculto" id="panel-preview">
+    <h2>3. Vista previa (editable)</h2>
+    <p>Puedes cambiar la mesa de cualquier estudiante antes de confirmar. Nada se guarda todavía.</p>
+    <div class="grid-mesas" id="grid-preview"></div>
+    <button type="button" class="primario" id="btn-confirmar" style="margin-top:1rem;">Guardar y confirmar</button>
+  </div>
+</main>
+<script src="config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/sorteo.js"></script>
+</body>
+</html>

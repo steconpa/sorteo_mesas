@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorteo de mesas - Menú principal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <h1>🎲 Sorteo de mesas y roles</h1>
+</header>
+<main>
+  <div class="tarjeta">
+    <h2>1. Selecciona el curso</h2>
+    <div class="grid-cursos" id="grid-cursos"></div>
+  </div>
+
+  <div class="tarjeta oculto" id="panel-acciones">
+    <h2>2. Elige una acción para <span id="curso-elegido"></span></h2>
+    <div class="grid-acciones">
+      <a class="tarjeta-accion" id="link-sorteo" href="#">
+        <h3>Nuevo sorteo</h3>
+        <p>Conformar (o repetir) las 6 mesas de trabajo del curso.</p>
+      </a>
+      <a class="tarjeta-accion" id="link-grupos" href="#">
+        <h3>Ver grupos actuales</h3>
+        <p>Consultar las mesas vigentes de un período.</p>
+      </a>
+      <a class="tarjeta-accion" id="link-roles" href="#">
+        <h3>Registrar roles</h3>
+        <p>Asignar el rol rotativo de cada integrante.</p>
+      </a>
+      <a class="tarjeta-accion" id="link-historial" href="#">
+        <h3>Ver historial de sorteos</h3>
+        <p>Consultar sorteos anteriores del curso (solo lectura).</p>
+      </a>
+    </div>
+  </div>
+</main>
+<script src="config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grupos actuales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <h1>👥 Grupos actuales — <span id="titulo-curso"></span></h1>
+  <a href="index.html">← Volver al menú</a>
+</header>
+<main>
+  <div id="error-global" class="mensaje-error oculto"></div>
+
+  <div class="tarjeta">
+    <div class="fila-form">
+      <label for="select-periodo">Periodo:</label>
+      <select id="select-periodo">
+        <option value="">-- selecciona --</option>
+        <option value="P3">P3</option>
+        <option value="P4">P4</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="tarjeta oculto" id="panel-vacio">
+    <p>No hay un sorteo vigente para este curso y periodo todavía.</p>
+  </div>
+
+  <div class="grid-mesas" id="grid-mesas"></div>
+</main>
+<script src="config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/grupos.js"></script>
+</body>
+</html>

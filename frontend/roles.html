@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registrar roles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <h1>🏷️ Registrar roles — <span id="titulo-curso"></span></h1>
+  <a href="index.html">← Volver al menú</a>
+</header>
+<main>
+  <div id="error-global" class="mensaje-error oculto"></div>
+  <div id="mensaje-exito" class="mensaje-exito oculto"></div>
+
+  <div class="tarjeta">
+    <div class="fila-form">
+      <label for="select-periodo">Periodo:</label>
+      <select id="select-periodo">
+        <option value="">-- selecciona --</option>
+        <option value="P3">P3</option>
+        <option value="P4">P4</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="tarjeta oculto" id="panel-vacio">
+    <p>No hay un sorteo vigente para este curso y periodo. Ve primero a "Nuevo sorteo".</p>
+  </div>
+
+  <div id="aviso-validacion" class="mensaje-aviso oculto"></div>
+
+  <div class="grid-mesas" id="grid-mesas"></div>
+
+  <div class="tarjeta oculto" id="panel-guardar">
+    <button type="button" class="primario" id="btn-guardar" disabled>Guardar roles</button>
+  </div>
+</main>
+<script src="config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/roles.js"></script>
+</body>
+</html>

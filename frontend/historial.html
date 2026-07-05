@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historial de sorteos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<header class="app-header">
+  <h1>🗂️ Historial de sorteos — <span id="titulo-curso"></span></h1>
+  <a href="index.html">← Volver al menú</a>
+</header>
+<main>
+  <div id="error-global" class="mensaje-error oculto"></div>
+
+  <div class="tarjeta">
+    <p class="cargando" id="mensaje-cargando">Cargando historial...</p>
+    <table class="tabla-simple oculto" id="tabla-historial">
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Periodo</th>
+          <th>Estudiantes</th>
+          <th>Estado</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpo-historial"></tbody>
+    </table>
+  </div>
+</main>
+<script src="config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/historial.js"></script>
+</body>
+</html>
