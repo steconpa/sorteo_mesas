@@ -192,3 +192,9 @@ Puedes abrir `frontend/index.html` directamente en el navegador (o servirlo
 con cualquier servidor estático) una vez tengas `frontend/config.js`
 configurado con la URL real del Web App ya desplegado — no hace falta
 ningún paso de build.
+
+## 8. Licencia
+
+Ver [LICENSE](LICENSE). Todos los derechos reservados — el código es
+visible por estar en un repositorio público (requisito de GitHub Pages),
+pero no está disponible para reutilización sin permiso del autor.
